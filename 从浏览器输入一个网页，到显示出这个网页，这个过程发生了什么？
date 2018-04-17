@@ -1,0 +1,13 @@
+从浏览器输入一个网页，到显示出这个网页，这个过程发生了什么？
+我们分两个角度去阐述：
+一.站在普通用户的视角：1.在浏览器输入了网址的域名
+                     2.浏览器显示了一个网页
+                     
+一.站在技术人员的视角：1.浏览器将域名解析成ip地址    #dns协议
+                     2.浏览器根据ip地址封装http数据包发送给服务器  #tcp协议 http协议
+                     3.服务器收到http请求，解析http请求内容  #操作系统（linux Windows） Web服务器（nginx apache）
+                     4.服务器根据请求，在数据库调用数据并返回web页面  
+                             web框架：django flask tornado
+                             数据库：  mysql oracle
+                     5.浏览器收到服务器的http回应，调用前端技术进行解析并显示给用户
+                            Web前端：HTML CSS JavaScript jquery bootstrap
